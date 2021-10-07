@@ -1,5 +1,4 @@
 import { combineReducers } from "react-redux";
+import authReducer from "./authReducer";
 
-const rootReducer = () => "replace me";
-
-export default combineReducers({ rootReducer });
+export default combineReducers({ isSignedIn: authReducer });
