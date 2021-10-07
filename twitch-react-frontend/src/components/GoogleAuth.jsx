@@ -11,9 +11,14 @@ class GoogleAuth extends Component {
         scope: "email",
       });
       this.auth = window.gapi.auth2.getAuthInstance();
-      this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+      this.changeAuthState(); // first time check
+      this.auth.isSignedIn.listen(this.changeAuthState);
     });
   }
+
+  changeAuthState = () => {
+    this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+  };
 
   renderAuthButton() {
     if (this.state.isSignedIn === null) {
