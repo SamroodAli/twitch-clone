@@ -59,4 +59,8 @@ class GoogleAuth extends Component {
   }
 }
 
-export default connect(null, { signIn, signOut })(GoogleAuth);
+const mapStateToProps = ({ isSignedIn }) => {
+  return { isSignedIn };
+};
+
+export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
