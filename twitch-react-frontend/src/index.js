@@ -9,6 +9,7 @@ const root = document.getElementById("root");
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(applyMiddleware()));
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
