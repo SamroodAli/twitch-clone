@@ -33,7 +33,7 @@ class StreamCreate extends Component {
   }
 }
 
-const validate = (formValues) => {
+const validateFunction = (formValues) => {
   const errors = {};
   if (!formValues.title) {
     errors.title = "You must enter a title";
@@ -47,4 +47,5 @@ const validate = (formValues) => {
 
 export default reduxForm({
   form: "streamCreate",
+  validate: validateFunction,
 })(StreamCreate);
