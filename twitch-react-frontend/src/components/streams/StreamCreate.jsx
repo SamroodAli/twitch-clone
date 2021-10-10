@@ -5,7 +5,7 @@ class StreamCreate extends Component {
   renderError({ error, touched }) {
     if (touched && error) {
       return (
-        <div className="ui message">
+        <div className="ui error message">
           <div className="header">{error}</div>
         </div>
       );
@@ -30,7 +30,7 @@ class StreamCreate extends Component {
   render() {
     return (
       <form
-        className="ui form"
+        className="ui form error"
         onSubmit={this.props.handleSubmit(this.onSubmit)}
       >
         <Field name="title" component={this.renderInput} label="Title" />
