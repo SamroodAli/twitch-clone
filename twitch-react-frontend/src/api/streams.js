@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://my-json-server.typicode.com/devsamrood/twitch-clone",
+  baseURL: "https://my-json-server.typicode.com/SamroodAli/twitch-clone",
 });
