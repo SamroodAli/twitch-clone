@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { connect } from "redux";
 
 class StreamList extends Component {
   render() {
@@ -10,4 +11,4 @@ class StreamList extends Component {
   }
 }
 
-export default StreamList;
+export default connect()(StreamList);
