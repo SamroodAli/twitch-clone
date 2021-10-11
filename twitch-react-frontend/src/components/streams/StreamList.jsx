@@ -1,9 +1,10 @@
 import { Component } from "react";
-import { connect } from "redux";
+import { connect } from "react-redux";
 import { fetchStreams } from "../../actions/index";
 
 class StreamList extends Component {
   componentDidMount() {
+    console.log("yeah I ran");
     this.props.fetchStreams();
   }
 

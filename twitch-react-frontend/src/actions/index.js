@@ -1,4 +1,3 @@
-import streams from "../api/streams";
 import {
   SIGN_IN,
   SIGN_OUT,
@@ -8,6 +7,7 @@ import {
   DELETE_STREAM,
   EDIT_STREAM,
 } from "./types";
+import streams from "../api/streams";
 
 export const signIn = (userId) => {
   return {
