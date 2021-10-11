@@ -16,7 +16,10 @@ class StreamEdit extends Component {
       return (
         <div>
           <h3>Edit a stream</h3>
-          <StreamForm onSubmit={this.onSubmit} />
+          <StreamForm
+            onSubmit={this.onSubmit}
+            initialValues={this.props.stream}
+          />
         </div>
       );
     } else {
