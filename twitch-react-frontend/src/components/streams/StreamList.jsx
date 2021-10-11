@@ -4,7 +4,6 @@ import { fetchStreams } from "../../actions/index";
 
 class StreamList extends Component {
   componentDidMount() {
-    console.log("yeah I ran");
     this.props.fetchStreams();
   }
 
@@ -31,8 +30,10 @@ class StreamList extends Component {
   }
 }
 
-const mapStateToProps = ({ streams }) => {
-  console.log(streams);
-  return { streams: Object.values(streams) };
+const mapStateToProps = ({ streams, auth: { userId } }) => {
+  return {
+    streams: Object.values(streams),
+    currentUserId: userId,
+  };
 };
 export default connect(mapStateToProps, { fetchStreams })(StreamList);
