@@ -2,7 +2,6 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStreams } from "../../actions/index";
 import { Link } from "react-router-dom";
-
 class StreamList extends Component {
   componentDidMount() {
     this.props.fetchStreams();
@@ -56,7 +55,7 @@ class StreamList extends Component {
   }
 }
 
-const mapStateToProps = ({ streams, isSignedIn, auth: { userId } }) => {
+const mapStateToProps = ({ streams, auth: { userId, isSignedIn } }) => {
   return {
     streams: Object.values(streams),
     currentUserId: userId,
