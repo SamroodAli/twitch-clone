@@ -23,10 +23,7 @@ export const signOut = () => {
 };
 
 export const createStream = (formValues) => async (dispatch) => {
-  const response = await streams.post(
-    "http://localhost:3001/streams",
-    formValues
-  );
+  const response = await streams.post("/streams", formValues);
   dispatch({ action: CREATE_STREAM, payload: response.data });
 };
 
@@ -36,7 +33,7 @@ export const fetchStream = (id) => async (dispatch) => {
 };
 
 export const fetchStreams = () => async (dispatch) => {
-  const response = await streams.get("streams");
+  const response = await streams.get("/streams");
   dispatch({ type: FETCH_STREAMS, payload: response.data });
 };
 
