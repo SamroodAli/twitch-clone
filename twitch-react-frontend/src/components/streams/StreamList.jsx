@@ -1,7 +1,13 @@
-import React from "react";
+import { Component } from "react";
 
-const StreamList = () => {
-  return <div>StreamList</div>;
-};
+class StreamList extends Component {
+  render() {
+    return (
+      <div>
+        <p>Hello lists</p>
+      </div>
+    );
+  }
+}
 
 export default StreamList;
