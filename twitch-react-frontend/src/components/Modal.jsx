@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import history from "../history";
 
-const Modal = (props) => {
+const Modal = ({ title, content, actions }) => {
   return ReactDOM.createPortal(
     <div
       className="ui dimmer modals visible active"
@@ -16,14 +16,9 @@ const Modal = (props) => {
           e.stopPropagation();
         }}
       >
-        <div className="header">Delete Stream</div>
-        <div className="content">
-          Are you sure you want to delete this stream ?
-        </div>
-        <div className="actions">
-          <button className="ui primary button">Delete</button>
-          <button className="ui button">Cancel</button>
-        </div>
+        <div className="header">{title}</div>
+        <div className="content">{content}</div>
+        <div className="actions">{actions}</div>
       </div>
     </div>,
     document.getElementById("modal")
