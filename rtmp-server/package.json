@@ -4,7 +4,7 @@
   "description": "A rtmp server for the twitch clone app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/SamroodAli/twitch-clone/issues"
   },
-  "homepage": "https://github.com/SamroodAli/twitch-clone/tree/main#readme"
+  "homepage": "https://github.com/SamroodAli/twitch-clone/tree/main#readme",
+  "devDependencies": {
+    "node-media-server": "^2.3.8"
+  }
 }
