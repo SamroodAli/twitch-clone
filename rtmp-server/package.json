@@ -1,0 +1,25 @@
+{
+  "name": "rtmp-server",
+  "version": "1.0.0",
+  "description": "A rtmp server for the twitch clone app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamroodAli/twitch-clone.git#main"
+  },
+  "keywords": [
+    "stream",
+    "rtmp",
+    "react",
+    "server"
+  ],
+  "author": "Samrood Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamroodAli/twitch-clone/issues"
+  },
+  "homepage": "https://github.com/SamroodAli/twitch-clone/tree/main#readme"
+}
