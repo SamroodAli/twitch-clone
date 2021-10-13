@@ -21,7 +21,7 @@ class StreamShow extends React.Component {
   }
 
   buildPlayer = () => {
-    if (this.player || !this.stream.stream) {
+    if (this.player || !this.props.stream) {
       return;
     }
     const { id } = this.props.match.params;
